@@ -59,6 +59,12 @@ async function run() {
     await client.close();
   }
 }
+
 console.log("### Solun Delete Bird ###");
 console.log("### Script Start @", new Date(), "###");
 run().catch(console.dir);
+
+setInterval(async () => {
+  console.log("### Script Restart @", new Date(), "###");
+  await run().catch(console.dir);
+}, 60000); // 60000 milliseconds = 1 minute
