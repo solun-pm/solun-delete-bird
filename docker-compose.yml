@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  solun-delete-bird:
+    image: ghcr.io/solun-pm/solun-delete-bird:main
+    container_name: solun-api
+    environment:
+      - MONGODB_URL=
+    volumes:
+      - /mnt/solun/files:/files
+    restart: always
