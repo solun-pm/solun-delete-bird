@@ -1,10 +1,8 @@
 version: '3.8'
 services:
-  solun-api:
-    image: ghcr.io/solun-pm/solun-api:main
+  solun-delete-bird:
+    image: ghcr.io/solun-pm/solun-delete-bird:main
     container_name: solun-api
-    ports:
-      - 3001:3000
     environment:
       - MONGODB_URL=
     volumes:
