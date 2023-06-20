@@ -43,8 +43,8 @@ async function run() {
       if (remainingTimeMin <= 0) {
         try {
           // Delete the file from the disk
-          await fs.unlink(path.resolve(file.raw_file_path.replace('/app/public/uploads/files//', '/opt/solun/files/')));
-          console.log(`Deleted file at ${file.raw_file_path.replace('/app/public/uploads/files//', '/opt/solun/files/')}`);
+          await fs.unlink(path.resolve(file.raw_file_path));
+          console.log(`Deleted file at ${file.raw_file_path}`);
 
           // Delete the file entry from MongoDB
           await collection.deleteOne({ _id: file._id });
