@@ -6,7 +6,7 @@ const path = require('path');
 const url = process.env.MONGODB_URL;
 const client = new MongoClient(url);
 
-const dbName = 'solun';
+const dbName = 'solun_proj';
 const collectionName = 'files';
 
 const deletionTimes = {
